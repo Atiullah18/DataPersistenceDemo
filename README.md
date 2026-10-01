@@ -2,7 +2,16 @@
 
 ## Experiment: Data Persistence Using SQLite in Android
 
-### Aim
+### Student Details
+
+- **Name:** Md Atiullah Ansari
+- **USN:** YOUR_USN
+- **Course:** Master of Computer Applications (MCA)
+- **University:** Jain (Deemed-to-be University), Bangalore
+
+---
+
+## Aim
 
 To develop an Android application that demonstrates data persistence using SQLite database for storing, retrieving, and managing student information.
 
@@ -10,11 +19,9 @@ To develop an Android application that demonstrates data persistence using SQLit
 
 ## Experiment Overview
 
-This experiment demonstrates how data can be stored permanently in an Android application using a local SQLite database.
+This experiment demonstrates data persistence in Android using a local SQLite database.
 
-The application contains a login screen and a student data management system. The user can enter login credentials, add student details, view saved student records, and clear the stored student records.
-
-The application uses `SQLiteOpenHelper` to create and manage the SQLite database.
+The application allows the user to login, enter student details, store the details in SQLite, retrieve saved records, display the records, clear the records, and logout.
 
 ---
 
@@ -22,40 +29,29 @@ The application uses `SQLiteOpenHelper` to create and manage the SQLite database
 
 ### SQLite Database
 
-SQLite is a lightweight, local relational database provided by Android. It allows applications to store structured data permanently on the device.
-
-In this application, SQLite is used to store student information and login credentials.
+SQLite is a lightweight relational database used in Android applications to store structured data locally on the device.
 
 ### SQLiteOpenHelper
 
-`SQLiteOpenHelper` is used to:
-
-- Create the SQLite database
-- Create database tables
-- Upgrade the database
-- Insert records
-- Retrieve records
-- Delete records
+`SQLiteOpenHelper` is used to create and manage the SQLite database. It is responsible for database creation, table creation, database upgrades, and database operations.
 
 ### Data Persistence
 
-Data persistence means that data remains stored even after navigating between screens or closing and reopening the application.
+Data persistence means that data remains stored even after navigating between screens or restarting the application.
 
 ---
 
 ## Scenario
 
-A student management application is developed for storing student details.
+A Student Data Management application is developed using Android Studio, Kotlin, XML, and SQLite.
 
-The application follows these steps:
+The application starts with a Login screen where the user enters a username and password.
 
-1. The user enters a username and password on the Login screen.
-2. After successful login, the user is taken to the Add Student Details screen.
-3. The user enters Student ID, Name, and Course.
-4. The student information is stored in the SQLite database.
-5. The saved records are displayed in the Student Database screen.
-6. The user can clear all student records using the Clear All button.
-7. The user can logout and return to the Login screen.
+After login, the user enters Student ID, Student Name, and Course.
+
+The student information is stored in the local SQLite database and can be retrieved and displayed in the Student Database screen.
+
+The user can also clear all student records and logout from the application.
 
 ---
 
@@ -64,31 +60,30 @@ The application follows these steps:
 - Android Studio
 - Kotlin
 - XML
-- SQLite
+- SQLite Database
 - SQLiteOpenHelper
 - Android SDK
 
 ---
 
-# Application Features
+## Application Features
 
 - User Login
 - Username and Password handling
 - Add Student Details
-- SQLite data storage
-- Retrieve saved student records
-- Display student records
+- Store student information in SQLite
+- Retrieve student records
+- Display saved records
 - Clear all student records
 - Logout functionality
-- SQLite Database inspection
+- SQLite database verification
+- Data persistence
 
 ---
 
 # Database Structure
 
-The application uses a SQLite database named:
-
-`StudentDB`
+The application uses a SQLite database named **StudentDB**.
 
 ### Students Table
 
@@ -102,10 +97,10 @@ The application uses a SQLite database named:
 
 | Column | Data Type | Description |
 |---|---|---|
-| username | TEXT | Login username |
-| password | TEXT | Login password |
+| username | TEXT | Login Username |
+| password | TEXT | Login Password |
 
-The login details are stored in SQLite through `DatabaseHelper.kt`.
+The login details are stored in SQLite using `DatabaseHelper.kt`.
 
 ---
 
@@ -115,26 +110,24 @@ The login details are stored in SQLite through `DatabaseHelper.kt`.
 DataPersistenceDemo
 │
 ├── app
-│   ├── src
-│   │   └── main
-│   │       ├── java
-│   │       │   └── com.example.datapersistencedemo
-│   │       │       ├── MainActivity.kt
-│   │       │       ├── LoginFragment.kt
-│   │       │       ├── AddDataFragment.kt
-│   │       │       ├── DatabaseFragment.kt
-│   │       │       └── DatabaseHelper.kt
-│   │       │
-│   │       └── res
-│   │           ├── drawable
-│   │           ├── layout
-│   │           │   ├── activity_main.xml
-│   │           │   ├── fragment_login.xml
-│   │           │   ├── fragment_add_data.xml
-│   │           │   └── fragment_database.xml
-│   │           └── values
-│   │
-│   └── build.gradle.kts
+│   └── src
+│       └── main
+│           ├── java
+│           │   └── com.example.datapersistencedemo
+│           │       ├── MainActivity.kt
+│           │       ├── LoginFragment.kt
+│           │       ├── AddDataFragment.kt
+│           │       ├── DatabaseFragment.kt
+│           │       └── DatabaseHelper.kt
+│           │
+│           └── res
+│               ├── drawable
+│               ├── layout
+│               │   ├── activity_main.xml
+│               │   ├── fragment_login.xml
+│               │   ├── fragment_add_data.xml
+│               │   └── fragment_database.xml
+│               └── values
 │
 ├── Screenshots
 │   ├── LoginScreen.png
