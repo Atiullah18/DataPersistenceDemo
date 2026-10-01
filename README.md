@@ -159,6 +159,7 @@ The Add Student Data screen allows the user to enter Student ID, Student Name, a
 
 ![Add Student Data](./Screenshots/AddStudentData.png)
 
+
 ---
 
 ## 3. Student Database
@@ -167,6 +168,7 @@ The Student Database screen displays the student records retrieved from the SQLi
 
 ![Student Database](./Screenshots/StudentDatabase.png)
 
+
 ---
 
 ## 4. SQLite Database
@@ -174,6 +176,7 @@ The Student Database screen displays the student records retrieved from the SQLi
 The SQLite database is verified using DB Browser for SQLite. The stored student records can be viewed directly in the database.
 
 ![SQLite Database](./Screenshots/SQLiteDatabase.png)
+
 
 ---
 
